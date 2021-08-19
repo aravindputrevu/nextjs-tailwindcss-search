@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,58 +10,56 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-5xl font-bold">
           Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
+          <a className="text-blue-450 hover:text-pink-400" href="https://elastic.co">
+            Next.js with Elasticsearch!
           </a>
         </h1>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
+        <p className="mt-5 text-3xl">
+          You know,{' '} for Search!
         </p>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+          <Link href="/ingest">
+            <a
+              href="/ingest"
+              className="p-4 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            >
+              <h3 className="text-2xl font-bold">Ingest Data &rarr;</h3>
+              <p className="mt-4 text-xl">
+                Index sample data into Elasticsearch!
+              </p>
+            </a>
+            </Link>
           <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            href="/search"
+            className="p-4 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <h3 className="text-2xl font-bold">Search &rarr;</h3>
             <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+              Search the data stored in Elasticsearch!
             </p>
           </a>
 
           <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html"
+            className="p-4 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">Learn &rarr;</h3>
             <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
+              Learn more about Elasticsearch Node.js client!
             </p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+            href="#"
+            className="p-4 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
             <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Deploy your Next.js & Elasticsearch site Vercel.
             </p>
           </a>
         </div>
@@ -69,12 +68,13 @@ export default function Home() {
       <footer className="flex items-center justify-center w-full h-24 border-t">
         <a
           className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          <img src="/elastic.svg" alt="Vercel Logo" className="p-1 h-9 ml-2" /><div className="p-2">&</div>  
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-5 ml-2" />
         </a>
       </footer>
     </div>
